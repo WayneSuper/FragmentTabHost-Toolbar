@@ -2,4 +2,6 @@
 <resources>
     <color name="tab_text_over">#EE00EE00</color>
     <color name="tab_text_nor">#EE3C3C3C</color>
+    <color name="actionbar_background">#0F0</color>
+    <color name="white">#FFFFFF</color>
 </resources>

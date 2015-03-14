@@ -1,6 +1,41 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_menu_post"
+        android:icon="@mipmap/actionbar_post_icon"
+        android:title="发布"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_menu_today"
+        android:icon="@mipmap/actionbar_today_icon"
+        android:title="今日推荐"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_menu_search"
+        android:icon="@mipmap/actionbar_search_icon"
+        android:title="搜索"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/actionbar_menu_personal"
+        android:title="个人中心"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/actionbar_menu_download"
+        android:title="应用下载"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/actionbar_menu_settings"
+        android:title="应用设置"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/actionbar_menu_exit"
+        android:title="推出应用"
+        app:showAsAction="never" />
 </menu>

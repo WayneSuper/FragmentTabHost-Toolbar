@@ -1,8 +1,30 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="FrameworkRoot.Theme" parent="Theme.AppCompat.NoActionBar" />
+    <style name="FrameworkRoot.Widget" parent="Theme.AppCompat" />
+
+    <!-- Immediate parent theme to specify base values for custom attributes -->
+    <style name="Theme" parent="FrameworkRoot.Theme"></style>
+
+    <style name="ActionBarThemeOverlay">
+        <item name="android:textColorPrimary">#fff</item>
+        <item name="colorControlNormal">#FFF</item>
+        <item name="colorControlHighlight">#3fff</item>
     </style>
+
+    <style name="ActionBarPopTheme" parent="ThemeOverlay.AppCompat.Light" >
+
+    </style>
+
+
+    <style name="Theme.IMA.Base" parent="@style/Theme">
+        <item name="colorPrimary">@color/actionbar_background</item>
+        <item name="colorPrimaryDark">@color/actionbar_background</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+    <style name="Theme.IMA" parent="Theme.IMA.Base" />
 
 </resources>

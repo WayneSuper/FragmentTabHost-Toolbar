@@ -4,6 +4,9 @@ import android.os.Build;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
@@ -12,7 +15,7 @@ import android.widget.TextView;
 import com.wayne.github.R;
 
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends ActionBarActivity {
     FragmentTabHost mTabhost;
 
     @Override
@@ -20,6 +23,9 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mTabhost = (FragmentTabHost) findViewById(android.R.id.tabhost);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.main_action_bar);
+        mToolbar.setTitle("底部导航");
+        setSupportActionBar(mToolbar);
         mTabhost.setup(MainActivity.this, getSupportFragmentManager(), R.id.container);
         initTabs();
         mTabhost.setCurrentTab(0);
@@ -37,6 +43,7 @@ public class MainActivity extends FragmentActivity {
                         view.findViewById(R.id.tab_text).setSelected(false);
                     }
                 }
+                supportInvalidateOptionsMenu();
             }
         });
 
@@ -66,8 +73,14 @@ public class MainActivity extends FragmentActivity {
 
             mTabhost.addTab(tab,mTab.getClzz(),null);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main,menu);
 
 
 
+        return true;
     }
 }
