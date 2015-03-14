@@ -11,9 +11,9 @@ import com.wayne.github.activity.fragment.QuestionFragment;
  */
 public enum MainTabs {
     NEWS(0,"资讯", R.drawable.tab_news, NewsFragment.class),
-    QUESTION(0,"问答", R.drawable.tab_question, QuestionFragment.class),
-    ACTIVE(0,"动态", R.drawable.tab_active, ActiveFragment.class),
-    ME(0,"我的", R.drawable.tab_me, MeFragment.class);
+    QUESTION(1,"问答", R.drawable.tab_question, QuestionFragment.class),
+    ACTIVE(2,"动态", R.drawable.tab_active, ActiveFragment.class),
+    ME(3,"我的", R.drawable.tab_me, MeFragment.class);
     private int id;
     private String tab;
     private int drawable;
